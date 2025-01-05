@@ -1,4 +1,4 @@
-function convertToRoman(num) {
+function convertToRoman(14) {
     const romanNumerals = [
         ["M", 1000],
         ["CM", 900],
@@ -24,4 +24,4 @@ function convertToRoman(num) {
     }
     return result;
 }
-console.log(convertToRoman(14));
+
