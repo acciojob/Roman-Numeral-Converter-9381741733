@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Roman Numeral Converter</title>
 </head>
-
 <body>
   <h1>Roman Numeral Converter</h1>
-  <p>Input a number to convert it into Roman numerals:</p>
-  <input id="numberInput" type="number" min="0" max="100000" placeholder="Enter a number" />
-  <button onclick="convertAndDisplay()">Convert</button>
-
-  <p id="result"></p>
-
   <script>
-    // Roman numeral conversion function
     function convertToRoman(num) {
-      if (num < 0 || num > 100000) {
-        return "Input out of range (0 to 100000)";
-      }
-
-      if (num === 0) return "N"; // Edge case: No standard Roman numeral for 0
+      if (num === 0) return "N"; // Romans had no numeral for zero
 
       const romanNumerals = [
         ["M", 1000],
@@ -39,23 +26,20 @@
       ];
 
       let result = "";
-      for (const [roman, value] of romanNumerals) {
+
+      for (const [symbol, value] of romanNumerals) {
         while (num >= value) {
-          result += roman;
+          result += symbol;
           num -= value;
         }
       }
       return result;
     }
 
-    // Helper to capture and display the result
-    function convertAndDisplay() {
-      const numberInput = document.getElementById("numberInput").value;
-      const num = parseInt(numberInput);
-      const result = convertToRoman(num);
-      document.getElementById("result").innerText = `Roman Numeral: ${result}`;
-    }
+    // Example test cases
+    console.log(convertToRoman(14)); // Output: XIV
+    console.log(convertToRoman(798)); // Output: DCCXCVIII
+    console.log(convertToRoman(0));  // Output: N
   </script>
 </body>
-
 </html>
