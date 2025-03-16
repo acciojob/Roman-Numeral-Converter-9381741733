@@ -1,5 +1,5 @@
 function convertToRoman(num) {
-  if (num === 0) return ""; // No Roman numeral for 0
+  if (num === 0) return ''; // No Roman numeral for 0
 
   const obj = [
       ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400], 
@@ -8,7 +8,7 @@ function convertToRoman(num) {
       ['I', 1]
   ];
 
-  let romanNumerals = "";
+  let romanNumerals = '';
 
   for (let i = 0; i < obj.length; i++) {
       const [symbol, value] = obj[i]; // Fixed destructuring
@@ -27,3 +27,4 @@ console.log(convertToRoman(798));   // "DCCXCVIII"
 console.log(convertToRoman(36));    // "XXXVI"
 console.log(convertToRoman(3999));  // "MMMCMXCIX"
 console.log(convertToRoman(0));     // ""
+module.exports=convertToRoman;
