@@ -31,4 +31,4 @@ console.log(convertToRoman(10000));    // Output: "X̅"
 console.log(convertToRoman(50000));    // Output: "L̅"
 console.log(convertToRoman(99999));    // Output: "C̅M̅X̅C̅I̅X̅"
 
-MediaSourceHandle.exports=convertToRoman;
+module.exports=convertToRoman;
