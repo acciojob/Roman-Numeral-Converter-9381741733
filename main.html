@@ -1,45 +1,16 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>Roman Numeral Converter</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Roman Numeral Converter</h1>
-  <script>
-    function convertToRoman(num) {
-      if (num === 0) return "N"; // Romans had no numeral for zero
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
 
-      const romanNumerals = [
-        ["M", 1000],
-        ["CM", 900],
-        ["D", 500],
-        ["CD", 400],
-        ["C", 100],
-        ["XC", 90],
-        ["L", 50],
-        ["XL", 40],
-        ["X", 10],
-        ["IX", 9],
-        ["V", 5],
-        ["IV", 4],
-        ["I", 1]
-      ];
-
-      let result = "";
-
-      for (const [symbol, value] of romanNumerals) {
-        while (num >= value) {
-          result += symbol;
-          num -= value;
-        }
-      }
-      return result;
-    }
-
-    // Example test cases
-    console.log(convertToRoman(14)); // Output: XIV
-    console.log(convertToRoman(798)); // Output: DCCXCVIII
-    console.log(convertToRoman(0));  // Output: N
-  </script>
 </body>
+
 </html>
